@@ -1,0 +1,14 @@
+stages:
+  - test
+  - deploy
+
+test:
+  script:
+    - mvn -B test
+
+deploy:
+  stage: deploy
+  script:
+    - mvn -B -DskipTests deploy
+  only:
+    - tags
