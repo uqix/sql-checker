@@ -1,4 +1,4 @@
-package com.uindata.sqlchecker;
+package io.github.uqix.sqlchecker;
 
 import java.util.Map;
 

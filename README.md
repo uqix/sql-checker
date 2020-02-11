@@ -11,7 +11,7 @@ By invoke all Mapper methods with dummy args which hits DB
 ```java
 package app.share;
 
-import com.uindata.sqlchecker.SqlChecker;
+import io.github.uqix.sqlchecker.SqlChecker;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package com.uindata.sqlchecker;
+package io.github.uqix.sqlchecker;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
