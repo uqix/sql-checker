@@ -4,7 +4,7 @@
 To verify that no SQL syntax errors in Mapper.xml
 
 ## How
-By invoke all Mapper methods with dummy args which hits DB
+By invoking all Mapper methods with dummy args which hits DB and catching syntax exceptions
 
 ## Usage
 
