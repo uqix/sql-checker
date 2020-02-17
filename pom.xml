@@ -6,10 +6,16 @@
     <groupId>io.github.uqix</groupId>
     <artifactId>sql-checker</artifactId>
     <version>1.0.0</version>
+
     <packaging>jar</packaging>
 
     <name>sql-checker</name>
-    <description></description>
+    <description>
+        SQL checker for Spring Boot Mybatis Mappers
+        By invoking all Mapper methods with dummy args which hits DB and catching syntax exceptions
+        To verify that no SQL syntax errors in Mapper.xml
+    </description>
+    <url>https://github.com/uqix/sql-checker</url>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -43,15 +49,36 @@
 	</dependency>
     </dependencies>
 
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>uqix</name>
+            <email>zenkiezhu@gmail.com</email>
+            <organization>GitHub</organization>
+            <organizationUrl>https://github.com/uqix</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/uqix/sql-checker.git</connection>
+        <developerConnection>scm:git:ssh://github.com:uqix/sql-checker.git</developerConnection>
+        <url>http://github.com/uqix/sql-checker/tree/master</url>
+    </scm>
+
     <distributionManagement>
         <snapshotRepository>
-            <id>nexus</id>
-            <url>http://192.168.1.105:8081/repository/maven-snapshots/</url>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
-
         <repository>
-            <id>nexus</id>
-            <url>http://192.168.1.105:8081/repository/maven-releases/</url>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 
