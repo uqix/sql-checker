@@ -26,7 +26,9 @@ import org.springframework.transaction.PlatformTransactionManager;
 class SqlCheckerConfig {
 
     @Bean
-    @DependsOn("liquibase")
+    // @DependsOn("liquibase")
+    // or
+    // @DependsOn("flyway")
     @Profile("sql_check")
     public SqlChecker sqlChecker(ApplicationContext context, PlatformTransactionManager txManager) {
         return new SqlChecker(context, txManager);
