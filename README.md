@@ -8,6 +8,8 @@ By invoking all Mapper methods with dummy args which hits DB and catching syntax
 
 ## Usage
 
+Maven dependency: [io.github.uqix/sql-checker](https://search.maven.org/artifact/io.github.uqix/sql-checker)
+
 ```java
 package app.share;
 
