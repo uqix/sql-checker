@@ -1,18 +1,12 @@
 # SQL checker for Spring Boot Mybatis Mappers
 
-## Why
-To verify that no SQL syntax errors in Mapper.xml
-
-## How
-By invoking all Mapper methods with dummy args which hits DB and catching syntax exceptions
+This package can check SQL syntax in `Mapper.xml` files by invoking all `Mapper` methods with dummy args.
 
 ## Usage
 
 Maven dependency: [io.github.uqix/sql-checker](https://search.maven.org/artifact/io.github.uqix/sql-checker)
 
 ```java
-package app.share;
-
 import io.github.uqix.sqlchecker.SqlChecker;
 
 import org.springframework.context.ApplicationContext;
@@ -35,3 +29,6 @@ class SqlCheckerConfig {
     }
 }
 ```
+
+### DisableSqlChecker
+You can ignore a Mapper method by annotate it with `@DisableSqlChecker`.
