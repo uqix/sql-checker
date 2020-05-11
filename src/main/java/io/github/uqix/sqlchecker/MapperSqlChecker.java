@@ -47,7 +47,15 @@ class MapperSqlChecker {
 
     @SneakyThrows
     private void invokeMapperMethod(Object mapper, Method method) {
-        log.debug("Invoke mapper method: {}.{}", method.getDeclaringClass().getName(), method.getName());
+        if (method.isAnnotationPresent(DisableSqlChecker.class)) {
+            log.debug("Ignore disabled mapper method: {}.{}",
+                      method.getDeclaringClass().getName(), method.getName());
+            return;
+        }
+
+        log.debug("Invoke mapper method: {}.{}",
+                  method.getDeclaringClass().getName(), method.getName());
+
         if (!method.isAccessible()) {
             method.setAccessible(true);
         }
