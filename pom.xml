@@ -5,7 +5,7 @@
 
     <groupId>io.github.uqix</groupId>
     <artifactId>sql-checker</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <packaging>jar</packaging>
 
